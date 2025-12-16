@@ -1,23 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   prova.c                                            :+:      :+:    :+:   */
+/*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lciardo <lciardo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/15 11:10:15 by lciardo           #+#    #+#             */
-/*   Updated: 2025/12/15 11:44:32 by lciardo          ###   ########.fr       */
+/*   Created: 2025/12/16 15:55:16 by lciardo           #+#    #+#             */
+/*   Updated: 2025/12/16 18:52:18 by lciardo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft/libft.h" 
+#ifndef FT_PRINTF_H
+# define FT_PRINTF_H
+# include <stdarg.h>
+# include <unistd.h>
+# include <stdlib.h>
 
-int	main(void)
-{
-	
-	ft_putstr_fd("La mia libft funziona anche qui!\n", 1);
-	
-	
-	return (0);
-}
-//  gcc prova.c -Llibft -lft 
+int	ft_printf(const char *str, ...);
+int	print_char(int c);
+int	print_str(char *str);
+int	print_dig(long n, int base, int flag);
+int	print_point(void *point);
+
+#endif
