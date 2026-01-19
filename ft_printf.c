@@ -6,7 +6,7 @@
 /*   By: lciardo <lciardo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/16 10:24:08 by lciardo           #+#    #+#             */
-/*   Updated: 2025/12/16 18:46:27 by lciardo          ###   ########.fr       */
+/*   Updated: 2026/01/19 13:22:06 by lciardo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,8 @@ int	ft_printf(const char *str, ...)
 	int		count;
 	int		x;
 
+	if (!str)
+		return (-1);
 	x = 0;
 	count = 0;
 	va_start (ap, str);
