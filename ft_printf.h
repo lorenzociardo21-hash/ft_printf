@@ -6,7 +6,7 @@
 /*   By: lciardo <lciardo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/30 10:02:16 by lciardo           #+#    #+#             */
-/*   Updated: 2026/01/30 12:10:34 by lciardo          ###   ########.fr       */
+/*   Updated: 2026/01/30 12:30:23 by lciardo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,6 @@ int	print_char(int c);
 int	print_str(char *str);
 int	print_dig(long n, int base, int flag);
 int	print_point(void *point);
-int	print_pointer(unsigned long n, int base, int flag);
+unsigned long	print_pointer(unsigned long n, unsigned long base, int flag);
 
 #endif
