@@ -6,7 +6,7 @@
 /*   By: lciardo <lciardo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/30 10:02:09 by lciardo           #+#    #+#             */
-/*   Updated: 2026/01/30 10:03:33 by lciardo          ###   ########.fr       */
+/*   Updated: 2026/01/30 12:15:19 by lciardo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,12 +66,12 @@ int	ft_printf(const char *str, ...)
 	return (count);
 }
 
-/*int main(void)
+/* int main(void)
 {
     int len_ft = 0;
     int len_std = 0;
 
-    len_ft = ft_printf("Mio: %c\n", 'A');
-    len_std = printf("Org: %c\n", 'A');
+    len_ft = ft_printf("This %p is even stranger\n", (void *)-1);
+    len_std = printf("This %p is even stranger\n", (void *)-1);
     printf("Len: Mio=%d | Org=%d\n", len_ft, len_std);
-}*/
+} */

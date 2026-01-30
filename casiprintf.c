@@ -6,7 +6,7 @@
 /*   By: lciardo <lciardo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/30 10:01:57 by lciardo           #+#    #+#             */
-/*   Updated: 2026/01/30 10:03:37 by lciardo          ###   ########.fr       */
+/*   Updated: 2026/01/30 12:12:32 by lciardo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,27 @@ int	print_dig(long n, int base, int flag)
 	}
 }
 
+int	print_pointer(unsigned long n, int base, int flag)
+{
+	int		count;
+	char	*symbol;
+
+	if (flag == 1)
+		symbol = "0123456789abcdef";
+	else
+		symbol = "0123456789ABCDEF";
+	if (n < 0)
+	{
+		write (1, "-", 1);
+		return (print_dig (-n, base, flag) + 1);
+	}
+	else
+	{
+		count = print_dig (n / base, base, flag);
+		return (count + print_dig (n % base, base, flag));
+	}
+}
+
 int	print_point(void *point)
 {
 	int				count;
@@ -67,6 +88,6 @@ int	print_point(void *point)
 		return (write(1, "(nil)", 5));
 	addres = (unsigned long)point;
 	count += write(1, "0x", 2);
-	count += print_dig(addres, 16, 1);
+	count += print_pointer(addres, 16, 1);
 	return (count);
 }
