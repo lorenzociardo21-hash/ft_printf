@@ -6,7 +6,7 @@
 /*   By: lciardo <lciardo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/30 10:02:16 by lciardo           #+#    #+#             */
-/*   Updated: 2026/01/30 12:53:33 by lciardo          ###   ########.fr       */
+/*   Updated: 2026/01/30 14:55:17 by lciardo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <stdio.h>
+# include <limits.h>
 
 int				ft_printf(const char *str, ...);
 int				print_char(int c);
